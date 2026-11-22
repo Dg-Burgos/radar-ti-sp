@@ -1,0 +1,35 @@
+name: Atualizar Radar TI-SP
+
+on:
+  schedule:
+    - cron: '30 10,22 * * *' # 07:30 e 19:30 no horário de Brasília (UTC-3)
+  workflow_dispatch: # Permite rodar manualmente clicando em um botão
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar bibliotecas
+        run: pip install requests beautifulsoup4
+
+      - name: Executar coleta de concursos
+        run: python coletor.py
+
+      - name: Salvar novos dados no site
+        run: |
+          git config user.name "Radar TI-SP Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dados.json
+          git diff --staged --quiet || git commit -m "Atualização automática do Radar TI-SP"
+          git push
