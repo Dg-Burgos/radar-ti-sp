@@ -1,0 +1,124 @@
+{
+  "ultima_atualizacao": "21/11/2026 às 21:40 (Horário de Brasília)",
+  "total": 6,
+  "fontes": [
+    {
+      "nome": "Portais de Notícias (Rumores, Autorizações e Editais)",
+      "ok": true,
+      "encontrados": 1
+    },
+    {
+      "nome": "PCI Concursos (Editais Abertos SP)",
+      "ok": true,
+      "encontrados": 4
+    },
+    {
+      "nome": "Querido Diário (Diários Oficiais Municipais SP)",
+      "ok": false,
+      "encontrados": 0
+    },
+    {
+      "nome": "PNCP (Contratação de Bancas em SP)",
+      "ok": true,
+      "encontrados": 3
+    }
+  ],
+  "concursos": [
+    {
+      "titulo": "TRIBUNAL REGIONAL FEDERAL 3 REGIAO (São Paulo/SP) — Contratação de Banca",
+      "resumo": "Contratação da Fundação para o Vestibular da Universidade Estadual Paulista \"Júlio de Mesquita Filho\" – VUNESP para prestação dos serviços de organização, planejamento e realização de Concurso Público, com a elaboração, impressão e aplicação de provas, para pr",
+      "url": "https://pncp.gov.br/app/compras/59949362000176/2026/104",
+      "fonte": "PNCP (Contratações Públicas)",
+      "banca": "VUNESP",
+      "estagio": "Banca Definida",
+      "esfera": "Federal (SP)",
+      "escolaridade": "Não informado",
+      "data_publicacao": "2026-09-29",
+      "id": "72f9650ce41c",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "MUNICIPIO DE PARAIBUNA (Paraibuna/SP) — Contratação de Banca",
+      "resumo": "CONTRATAÇÃO DA EMPRESA VUNESP PARA PRESTAÇÃO DE SERVIÇOS VISANDO TODOS OS PROCEDIMENTOS NECESSÁRIOS (PLANEJAMENTO, ORGANIZAÇÃO E EXECUÇÃO) PARA A REALIZAÇÃO DE CONCURSOS PÚBLICOS DA PREFEITURA DA ESTÂNCIA TURÍSTICA DE PARAIBUNA/SP",
+      "url": "https://pncp.gov.br/app/compras/46643474000152/2026/81",
+      "fonte": "PNCP (Contratações Públicas)",
+      "banca": "VUNESP",
+      "estagio": "Banca Definida",
+      "esfera": "Municipal (SP)",
+      "escolaridade": "Não informado",
+      "data_publicacao": "2026-09-10",
+      "id": "f4080bc6d6f2",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "MUNICIPIO DE PRESIDENTE PRUDENTE (Presidente Prudente/SP) — Contratação de Banca",
+      "resumo": "contratação da empresa VUNESP, mediante dispensa de licitação, para proceder à concurso público",
+      "url": "https://pncp.gov.br/app/compras/55356653000108/2024/282",
+      "fonte": "PNCP (Contratações Públicas)",
+      "banca": "VUNESP",
+      "estagio": "Banca Definida",
+      "esfera": "Municipal (SP)",
+      "escolaridade": "Não informado",
+      "data_publicacao": "2024-10-02",
+      "id": "5f3d02b55f89",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "Câmara de Carapicuíba (SP)",
+      "resumo": "2 vagas até R$ 5.295,09 Oficial de Manutenção, Técnico em Tecnologia da Informação Médio / Superior | Prazo: 06/12/2026",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-carapicuiba-sp-abre-concurso-publico-para-oficial-de-manutencao-e-tecnico-em-tecnologia-da-informacao",
+      "fonte": "PCI Concursos",
+      "banca": "Banca a Definir",
+      "estagio": "Edital Aberto",
+      "esfera": "Estadual (SP)",
+      "escolaridade": "Não informado",
+      "data_publicacao": "2026-11-21",
+      "id": "1cb194e7aaa6",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (SP)",
+      "resumo": "6 vagas até R$ 5.215,39 Técnico de Laboratório, Analista de Tecnologia da Informação, Engenheiro de Segurança do Trabalho Técnico / Superior | Prazo: 04/01/2027",
+      "url": "https://www.pciconcursos.com.br/noticias/ifsp-abre-concurso-publico-para-cargos-tecnico-administrativos",
+      "fonte": "PCI Concursos",
+      "banca": "Banca a Definir",
+      "estagio": "Edital Aberto",
+      "esfera": "Federal (SP)",
+      "escolaridade": "Superior",
+      "data_publicacao": "2026-11-21",
+      "id": "0d0f5933a5ef",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "IFSP abre inscrições para a especialização gratuita em Gestão Estratégica de Tecnologia da Informação",
+      "resumo": "Capturado via Hora Brasil.",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWDFLb204Y003eTlfTDVsQ2hwS3Fuc3ZpNUNZTWhnMFdsMU03bmdOOENSd0Q5aGRMSnNLbFlwSm1mSEpObUk4UWhERTdweVZSZ2JoMkZQUW9vUExQQWN2ZTNGWE5wMlZiV0V3ODBVQUxnSTFSeHhLOXdOQXpKZW5VWF96QXlwVE95ZDVBWHBkd2VMdkR2S3ZkYWphTVBZaGp4Wk9oTDZ1LUdZb3E4T1dwVkNEWTdadFlmS1RhNFBTblpiQWNINVpSWi0xdWtGM2lRWEpGYWZFd2U2aFk?oc=5",
+      "fonte": "Notícias (Hora Brasil)",
+      "banca": "Banca a Definir",
+      "estagio": "Edital Aberto",
+      "esfera": "Federal (SP)",
+      "escolaridade": "Não informado",
+      "data_publicacao": "2026-11-09",
+      "id": "ff17574e8e97",
+      "primeira_vez_visto": "2026-11-21",
+      "ultima_vez_visto": "2026-11-21",
+      "mudou_fase": false,
+      "novo": true
+    }
+  ]
+}
