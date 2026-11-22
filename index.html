@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar TI-SP — Concursos de T.I. em São Paulo</title>
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --text: #182230;
+      --muted: #5b6778;
+      --border: #dfe5ee;
+      --primary: #1d4ed8;
+      --vunesp-bg: #fffbeb;
+      --vunesp-border: #f59e0b;
+      --vunesp-text: #92400e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 48px;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 24px 16px;
+      border-bottom: 4px solid var(--vunesp-border);
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    .header-top {
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      align-items: center; gap: 12px;
+    }
+    header h1 { font-size: 1.6rem; letter-spacing: -0.02em; }
+    header p { color: #cbd5e1; font-size: 0.92rem; margin-top: 4px; }
+    .update-pill {
+      background: rgba(255,255,255,0.1);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: #e2e8f0;
+    }
+
+    /* Resumo numérico */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .stat-card.vunesp {
+      background: var(--vunesp-bg);
+      border-color: var(--vunesp-border);
+    }
+    .stat-num { font-size: 1.6rem; font-weight: 700; }
+    .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+
+    /* Abas de Bancas */
+    .banca-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+    .tab-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .tab-btn:hover { border-color: var(--primary); }
+    .tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .tab-btn.vunesp-tab { border-color: var(--vunesp-border); color: var(--vunesp-text); background: var(--vunesp-bg); }
+    .tab-btn.vunesp-tab.active { background: #d97706; color: #fff; border-color: #d97706; }
+
+    /* Barra de filtros */
+    .filters {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 780px) {
+      .filters { grid-template-columns: 1fr; }
+    }
+    .filters input, .filters select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      background: #fff;
+      color: var(--text);
+    }
+
+    /* Seção VUNESP Destaque */
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 22px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .vunesp-box {
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      border: 2px solid var(--vunesp-border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 26px;
+    }
+    .vunesp-box .section-title { margin-top: 0; color: var(--vunesp-text); }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      transition: transform 0.12s, box-shadow 0.12s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      letter-spacing: 0.01em;
+    }
+    .est-aberto { background: #dcfce7; color: #166534; }
+    .est-banca { background: #dbeafe; color: #1e40af; }
+    .est-comissao { background: #f3e8ff; color: #6b21a8; }
+    .est-autorizado { background: #fef3c7; color: #92400e; }
+    .est-rumor { background: #f1f5f9; color: #475569; }
+    .b-banca { background: #1e293b; color: #fff; }
+    .b-vunesp { background: #d97706; color: #fff; }
+    .b-novo { background: #dc2626; color: #fff; }
+    .b-fase { background: #0d9488; color: #fff; }
+
+    .card h3 { font-size: 1rem; line-height: 1.35; margin-bottom: 6px; }
+    .card p { font-size: 0.86rem; color: var(--muted); }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn-link {
+      text-decoration: none;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 7px;
+      white-space: nowrap;
+    }
+    .btn-link:hover { opacity: 0.92; }
+
+    .empty {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    /* Rodapé de auditoria das fontes */
+    .sources-bar {
+      margin-top: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .sources-bar h4 { font-size: 0.88rem; margin-bottom: 10px; color: var(--muted); }
+    .sources-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .source-chip {
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-ok { background: #16a34a; }
+    .dot-err { background: #ea580c; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-top">
+      <div>
+        <h1>Radar TI-SP</h1>
+        <p>Monitor automático de concursos de T.I. em São Paulo (Estaduais, Municipais e Federais em SP)</p>
+      </div>
+      <div class="update-pill" id="ultimaAtualizacao">Carregando dados...</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats" id="stats"></section>
+
+    <div class="banca-tabs" id="bancaTabs"></div>
+
+    <section class="filters">
+      <input type="search" id="busca" placeholder="Buscar órgão, cidade ou cargo (ex: TJSP, SEFAZ, Campinas, Dados)...">
+      <select id="filtroEstagio">
+        <option value="TODOS">Todos os estágios</option>
+        <option value="Edital Aberto">Edital Aberto</option>
+        <option value="Banca Definida">Banca Definida</option>
+        <option value="Comissão Formada">Comissão Formada</option>
+        <option value="Autorizado">Autorizado</option>
+        <option value="Previsto / Rumor">Previsto / Rumor</option>
+      </select>
+      <select id="filtroEsfera">
+        <option value="TODAS">Todas as esferas</option>
+        <option value="Estadual (SP)">Estadual (SP)</option>
+        <option value="Municipal (SP)">Municipal (SP)</option>
+        <option value="Federal (SP)">Federal (SP)</option>
+      </select>
+      <select id="filtroNivel">
+        <option value="TODOS">Todas escolaridades</option>
+        <option value="Superior">Nível Superior</option>
+        <option value="Técnico / Médio">Técnico / Médio</option>
+      </select>
+    </section>
+
+    <div id="areaVunesp"></div>
+
+    <div class="section-title" id="tituloLista">Oportunidades monitoradas</div>
+    <section class="grid" id="listaConcursos"></section>
+
+    <section class="sources-bar" id="statusFontes" style="display:none;">
+      <h4>Status da última varredura por fonte</h4>
+      <div class="sources-list" id="listaFontes"></div>
+    </section>
+  </main>
+
+  <script>
+    let todosConcursos = [];
+    let bancaAtiva = "TODAS";
+    const BANCAS_PRINCIPAIS = ["VUNESP", "FGV", "Cebraspe", "FCC", "Instituto Mais"];
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function classeEstagio(est) {
+      if (est === "Edital Aberto") return "est-aberto";
+      if (est === "Banca Definida") return "est-banca";
+      if (est === "Comissão Formada") return "est-comissao";
+      if (est === "Autorizado") return "est-autorizado";
+      return "est-rumor";
+    }
+
+    function formatarData(iso) {
+      if (!iso || !iso.includes("-")) return "";
+      const [a, m, d] = iso.split("-");
+      return `${d}/${m}/${a}`;
+    }
+
+    function criarCard(item) {
+      const ehVunesp = item.banca === "VUNESP";
+      return `
+        <article class="card">
+          <div>
+            <div class="badges">
+              <span class="badge ${classeEstagio(item.estagio)}">${escapeHtml(item.estagio)}</span>
+              <span class="badge ${ehVunesp ? "b-vunesp" : "b-banca"}">${ehVunesp ? "★ " : ""}${escapeHtml(item.banca)}</span>
+              ${item.novo ? '<span class="badge b-novo">NOVO</span>' : ""}
+              ${item.mudou_fase ? '<span class="badge b-fase">AVANÇOU DE FASE</span>' : ""}
+            </div>
+            <h3>${escapeHtml(item.titulo)}</h3>
+            <p>${escapeHtml(item.resumo)}</p>
+          </div>
+          <div class="meta-row">
+            <div>
+              <strong>${escapeHtml(item.esfera)}</strong> • ${escapeHtml(item.escolaridade)}<br>
+              <span>${escapeHtml(item.fonte)} • ${formatarData(item.data_publicacao)}</span>
+            </div>
+            <a class="btn-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">Abrir fonte ↗</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderizarStats() {
+      const abertos = todosConcursos.filter(c => c.estagio === "Edital Aberto").length;
+      const autorizadosOuBanca = todosConcursos.filter(c => ["Autorizado", "Comissão Formada", "Banca Definida"].includes(c.estagio)).length;
+      const rumores = todosConcursos.filter(c => c.estagio === "Previsto / Rumor").length;
+      const vunesp = todosConcursos.filter(c => c.banca === "VUNESP").length;
+
+      document.getElementById("stats").innerHTML = `
+        <div class="stat-card vunesp"><div class="stat-num">${vunesp}</div><div class="stat-label">★ VUNESP</div></div>
+        <div class="stat-card"><div class="stat-num">${abertos}</div><div class="stat-label">Editais Abertos</div></div>
+        <div class="stat-card"><div class="stat-num">${autorizadosOuBanca}</div><div class="stat-label">Autorizados / Banca</div></div>
+        <div class="stat-card"><div class="stat-num">${rumores}</div><div class="stat-label">Previstos / Rumores</div></div>
+      `;
+    }
+
+    function renderizarAbas() {
+      const opcoes = [
+        { id: "TODAS", label: `Todas (${todosConcursos.length})` },
+        { id: "VUNESP", label: `★ VUNESP (${todosConcursos.filter(c => c.banca === "VUNESP").length})`, vunesp: true },
+        { id: "FGV", label: `FGV (${todosConcursos.filter(c => c.banca === "FGV").length})` },
+        { id: "Cebraspe", label: `Cebraspe (${todosConcursos.filter(c => c.banca === "Cebraspe").length})` },
+        { id: "FCC", label: `FCC (${todosConcursos.filter(c => c.banca === "FCC").length})` },
+        { id: "Instituto Mais", label: `Instituto Mais (${todosConcursos.filter(c => c.banca === "Instituto Mais").length})` },
+        { id: "OUTRAS", label: `Outras Bancas (${todosConcursos.filter(c => !BANCAS_PRINCIPAIS.includes(c.banca) && c.banca !== "Banca a Definir").length})` },
+        { id: "Banca a Definir", label: `Banca a Definir (${todosConcursos.filter(c => c.banca === "Banca a Definir").length})` },
+      ];
+
+      document.getElementById("bancaTabs").innerHTML = opcoes.map(op => `
+        <button class="tab-btn ${op.vunesp ? "vunesp-tab" : ""} ${bancaAtiva === op.id ? "active" : ""}" data-banca="${op.id}">
+          ${op.label}
+        </button>
+      `).join("");
+
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          bancaAtiva = btn.dataset.banca;
+          renderizarAbas();
+          renderizarLista();
+        });
+      });
+    }
+
+    function aplicarFiltros(lista) {
+      const q = document.getElementById("busca").value.trim().toLowerCase();
+      const est = document.getElementById("filtroEstagio").value;
+      const esf = document.getElementById("filtroEsfera").value;
+      const niv = document.getElementById("filtroNivel").value;
+
+      return lista.filter(c => {
+        if (est !== "TODOS" && c.estagio !== est) return false;
+        if (esf !== "TODAS" && c.esfera !== esf) return false;
+        if (niv !== "TODOS" && !c.escolaridade.includes(niv.split(" ")[0])) return false;
+        if (q) {
+          const texto = `${c.titulo} ${c.resumo} ${c.banca} ${c.fonte}`.toLowerCase();
+          if (!texto.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderizarLista() {
+      const filtradosBase = aplicarFiltros(todosConcursos);
+      const areaVunesp = document.getElementById("areaVunesp");
+      const listaEl = document.getElementById("listaConcursos");
+      const tituloLista = document.getElementById("tituloLista");
+
+      // Destaque fixo da VUNESP quando estiver na visão geral
+      if (bancaAtiva === "TODAS") {
+        const itensVunesp = filtradosBase.filter(c => c.banca === "VUNESP");
+        const demais = filtradosBase.filter(c => c.banca !== "VUNESP");
+
+        if (itensVunesp.length > 0) {
+          areaVunesp.innerHTML = `
+            <section class="vunesp-box">
+              <div class="section-title">★ Destaques da Banca Favorita: VUNESP (${itensVunesp.length})</div>
+              <div class="grid">${itensVunesp.map(criarCard).join("")}</div>
+            </section>
+          `;
+        } else {
+          areaVunesp.innerHTML = "";
+        }
+
+        tituloLista.textContent = `Demais bancas e concursos sem banca definida (${demais.length})`;
+        listaEl.innerHTML = demais.length
+          ? demais.map(criarCard).join("")
+          : '<div class="empty">Nenhum concurso encontrado para os filtros selecionados.</div>';
+        return;
+      }
+
+      areaVunesp.innerHTML = "";
+      let filtradosBanca = filtradosBase;
+      if (bancaAtiva === "OUTRAS") {
+        filtradosBanca = filtradosBase.filter(c => !BANCAS_PRINCIPAIS.includes(c.banca) && c.banca !== "Banca a Definir");
+      } else {
+        filtradosBanca = filtradosBase.filter(c => c.banca === bancaAtiva);
+      }
+
+      tituloLista.textContent = `${bancaAtiva === "OUTRAS" ? "Outras Bancas" : bancaAtiva} (${filtradosBanca.length})`;
+      listaEl.innerHTML = filtradosBanca.length
+        ? filtradosBanca.map(criarCard).join("")
+        : '<div class="empty">Nenhum concurso encontrado nesta banca com os filtros atuais.</div>';
+    }
+
+    async function iniciar() {
+      try {
+        const resp = await fetch(`./dados.json?t=${Date.now()}`);
+        if (!resp.ok) throw new Error("Sem dados ainda");
+        const dados = await resp.json();
+
+        todosConcursos = dados.concursos || [];
+        document.getElementById("ultimaAtualizacao").textContent = `Atualizado em ${dados.ultima_atualizacao}`;
+
+        if (dados.fontes && dados.fontes.length) {
+          document.getElementById("statusFontes").style.display = "block";
+          document.getElementById("listaFontes").innerHTML = dados.fontes.map(f => `
+            <div class="source-chip">
+              <span class="dot ${f.ok ? "dot-ok" : "dot-err"}"></span>
+              <span>${escapeHtml(f.nome)} (${f.encontrados})</span>
+            </div>
+          `).join("");
+        }
+
+        renderizarStats();
+        renderizarAbas();
+        renderizarLista();
+      } catch (e) {
+        document.getElementById("ultimaAtualizacao").textContent = "Aguardando primeira coleta";
+        document.getElementById("listaConcursos").innerHTML = `
+          <div class="empty">
+            O painel já está no ar, mas o robô ainda não gerou o arquivo <strong>dados.json</strong>.<br><br>
+            Vá na aba <strong>Actions</strong> do seu repositório no GitHub, clique em <strong>Atualizar Radar TI-SP</strong> e aperte <strong>Run workflow</strong>. Em 1 minuto, recarregue esta página.
+          </div>
+        `;
+      }
+    }
+
+    ["busca", "filtroEstagio", "filtroEsfera", "filtroNivel"].forEach(id => {
+      document.getElementById(id).addEventListener("input", renderizarLista);
+      document.getElementById(id).addEventListener("change", renderizarLista);
+    });
+
+    iniciar();
+  </script>
+</body>
+</html>
