@@ -1,11 +1,11 @@
 {
-  "ultima_atualizacao": "22/11/2026 às 23:55 (Horário de Brasília)",
-  "total": 7,
+  "ultima_atualizacao": "23/11/2026 às 09:51 (Horário de Brasília)",
+  "total": 8,
   "fontes": [
     {
       "nome": "Portais de Notícias (Rumores, Autorizações e Editais)",
       "ok": true,
-      "encontrados": 2
+      "encontrados": 3
     },
     {
       "nome": "PCI Concursos (Editais Abertos SP)",
@@ -27,7 +27,7 @@
     {
       "titulo": "TRIBUNAL REGIONAL FEDERAL 3 REGIAO (São Paulo/SP) — Contratação de Banca",
       "resumo": "Contratação da Fundação para o Vestibular da Universidade Estadual Paulista \"Júlio de Mesquita Filho\" – VUNESP para prestação dos serviços de organização, planejamento e realização de Concurso Público, com a elaboração, impressão e aplicação de provas, para pr",
-      "url": "https://pncp.gov.br/app/compras/59949362000176/2026/104",
+      "url": "https://pncp.gov.br/app/editais/59949362000176/2026/104",
       "fonte": "PNCP (Contratações Públicas)",
       "banca": "VUNESP",
       "estagio": "Banca Definida",
@@ -36,14 +36,14 @@
       "data_publicacao": "2026-09-29",
       "id": "72f9650ce41c",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
     {
       "titulo": "MUNICIPIO DE PARAIBUNA (Paraibuna/SP) — Contratação de Banca",
       "resumo": "CONTRATAÇÃO DA EMPRESA VUNESP PARA PRESTAÇÃO DE SERVIÇOS VISANDO TODOS OS PROCEDIMENTOS NECESSÁRIOS (PLANEJAMENTO, ORGANIZAÇÃO E EXECUÇÃO) PARA A REALIZAÇÃO DE CONCURSOS PÚBLICOS DA PREFEITURA DA ESTÂNCIA TURÍSTICA DE PARAIBUNA/SP",
-      "url": "https://pncp.gov.br/app/compras/46643474000152/2026/81",
+      "url": "https://pncp.gov.br/app/editais/46643474000152/2026/81",
       "fonte": "PNCP (Contratações Públicas)",
       "banca": "VUNESP",
       "estagio": "Banca Definida",
@@ -52,14 +52,14 @@
       "data_publicacao": "2026-09-10",
       "id": "f4080bc6d6f2",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
     {
       "titulo": "MUNICIPIO DE PRESIDENTE PRUDENTE (Presidente Prudente/SP) — Contratação de Banca",
       "resumo": "contratação da empresa VUNESP, mediante dispensa de licitação, para proceder à concurso público",
-      "url": "https://pncp.gov.br/app/compras/55356653000108/2024/282",
+      "url": "https://pncp.gov.br/app/editais/55356653000108/2024/282",
       "fonte": "PNCP (Contratações Públicas)",
       "banca": "VUNESP",
       "estagio": "Banca Definida",
@@ -68,7 +68,7 @@
       "data_publicacao": "2024-10-02",
       "id": "5f3d02b55f89",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
@@ -81,10 +81,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Estadual (SP)",
       "escolaridade": "Não informado",
-      "data_publicacao": "2026-11-22",
+      "data_publicacao": "2026-11-23",
       "id": "1cb194e7aaa6",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
@@ -97,10 +97,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Federal (SP)",
       "escolaridade": "Superior",
-      "data_publicacao": "2026-11-22",
+      "data_publicacao": "2026-11-23",
       "id": "0d0f5933a5ef",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
@@ -116,7 +116,23 @@
       "data_publicacao": "2026-11-09",
       "id": "ff17574e8e97",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "Pós-graduação gratuita no IFSP tem vagas em Tecnologia da Informação e seleção sem prova",
+      "resumo": "Capturado via Hora Brasil.",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPakFuSGhEb1ZYTjlxS2oyZFZLOWJSTWxtQk82Z25ZbUp4NURVVnF1a2RTLTNvQkx6WUlvVXNUMXZ3M05mZHF4VTd5em5QMkRzeVBSNFZYUGQySnJyXzVaRTZlSUZqVWZzSTVUVFlTVXNiWTRLOFZIdGtINDRUZVYzbjRma1NZWGFHN3JEUmdjSXdXaS0wbVRYUmVCRTBJQzFVdGJxRzY1UE1vRjVITmU2SHh6YnJMTmRLSFZWWlB0U2VCcjhGaHZfMVN3?oc=5",
+      "fonte": "Notícias (Hora Brasil)",
+      "banca": "Banca a Definir",
+      "estagio": "Previsto / Rumor",
+      "esfera": "Federal (SP)",
+      "escolaridade": "Superior",
+      "data_publicacao": "2026-11-23",
+      "id": "ce567c95cfdc",
+      "primeira_vez_visto": "2026-11-23",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     },
@@ -132,7 +148,7 @@
       "data_publicacao": "2026-11-17",
       "id": "d87729df4963",
       "primeira_vez_visto": "2026-11-22",
-      "ultima_vez_visto": "2026-11-22",
+      "ultima_vez_visto": "2026-11-23",
       "mudou_fase": false,
       "novo": true
     }
