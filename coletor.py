@@ -410,11 +410,19 @@ def coletar_pncp() -> tuple[list[dict], dict]:
                     continue
 
                 banca = detectar_banca(texto_analise)
-                item_url = doc.get("item_url") or ""
-                if item_url.startswith("/"):
-                    link = f"https://pncp.gov.br/app{item_url}"
+                cnpj = re.sub(r"\D", "", str(doc.get("orgao_cnpj") or ""))
+                ano = str(doc.get("ano") or "").strip()
+                seq = str(doc.get("numero_sequencial") or "").strip().lstrip("0")
+
+                if cnpj and ano and seq:
+                    link = f"https://pncp.gov.br/app/editais/{cnpj}/{ano}/{seq}"
                 else:
-                    link = "https://pncp.gov.br/app/editais?ufs=SP"
+                    item_url = (doc.get("item_url") or "").strip()
+                    if item_url.startswith("/"):
+                        caminho = item_url.replace("/compras/", "/editais/", 1)
+                        link = f"https://pncp.gov.br{caminho}" if caminho.startswith("/app/") else f"https://pncp.gov.br/app{caminho}"
+                    else:
+                        link = f"https://pncp.gov.br/app/editais?q={urllib.parse.quote(orgao)}&status=todos&ufs=SP"
 
                 data_pub = (doc.get("data_publicacao_pncp") or AGORA.strftime("%Y-%m-%d"))[:10]
                 itens.append({
@@ -465,6 +473,8 @@ def main():
     limite_data = (AGORA - timedelta(days=DIAS_RETENCAO)).strftime("%Y-%m-%d")
     for item_id, antigo in historico.items():
         if antigo.get("ultima_vez_visto", "2000-01-01") >= limite_data:
+            if "pncp.gov.br/app/compras/" in antigo.get("url", ""):
+                antigo["url"] = antigo["url"].replace("pncp.gov.br/app/compras/", "pncp.gov.br/app/editais/")
             mapa_final[item_id] = antigo
 
     hoje_str = AGORA.strftime("%Y-%m-%d")
