@@ -1,11 +1,11 @@
 {
-  "ultima_atualizacao": "27/11/2026 às 01:21 (Horário de Brasília)",
+  "ultima_atualizacao": "27/11/2026 às 16:33 (Horário de Brasília)",
   "total": 9,
   "fontes": [
     {
       "nome": "Portais de Notícias (Rumores, Autorizações e Editais)",
       "ok": true,
-      "encontrados": 2
+      "encontrados": 3
     },
     {
       "nome": "PCI Concursos (Editais Abertos SP)",
@@ -148,7 +148,7 @@
       "data_publicacao": "2026-11-23",
       "id": "ce567c95cfdc",
       "primeira_vez_visto": "2026-11-23",
-      "ultima_vez_visto": "2026-11-23",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
