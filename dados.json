@@ -1,16 +1,16 @@
 {
-  "ultima_atualizacao": "26/11/2026 às 16:44 (Horário de Brasília)",
-  "total": 8,
+  "ultima_atualizacao": "27/11/2026 às 01:21 (Horário de Brasília)",
+  "total": 9,
   "fontes": [
     {
       "nome": "Portais de Notícias (Rumores, Autorizações e Editais)",
       "ok": true,
-      "encontrados": 1
+      "encontrados": 2
     },
     {
       "nome": "PCI Concursos (Editais Abertos SP)",
       "ok": true,
-      "encontrados": 4
+      "encontrados": 6
     },
     {
       "nome": "Querido Diário (Diários Oficiais Municipais SP)",
@@ -36,7 +36,7 @@
       "data_publicacao": "2026-09-29",
       "id": "72f9650ce41c",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -52,7 +52,7 @@
       "data_publicacao": "2026-09-10",
       "id": "f4080bc6d6f2",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -68,7 +68,7 @@
       "data_publicacao": "2024-10-02",
       "id": "5f3d02b55f89",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -81,10 +81,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Estadual (SP)",
       "escolaridade": "Não informado",
-      "data_publicacao": "2026-11-26",
+      "data_publicacao": "2026-11-27",
       "id": "1cb194e7aaa6",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -97,10 +97,26 @@
       "estagio": "Edital Aberto",
       "esfera": "Federal (SP)",
       "escolaridade": "Superior",
-      "data_publicacao": "2026-11-26",
+      "data_publicacao": "2026-11-27",
       "id": "0d0f5933a5ef",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
+      "mudou_fase": false,
+      "novo": true
+    },
+    {
+      "titulo": "FAMESP - Fundação para o Desenvolvimento Médico e Hospitalar (SP)",
+      "resumo": "5 vagas até R$ 12.154,19 Enfermeiro, Analista de Sistemas Júnior, Médico Superior | Prazo: 29/11 a 08/12/2026",
+      "url": "https://www.pciconcursos.com.br/noticias/famesp-sp-abre-processos-seletivos-para-cargos-de-nivel-superior-com-ganhos-de-12-1-mil",
+      "fonte": "PCI Concursos",
+      "banca": "Banca a Definir",
+      "estagio": "Edital Aberto",
+      "esfera": "Estadual (SP)",
+      "escolaridade": "Superior",
+      "data_publicacao": "2026-11-27",
+      "id": "a093ab68b469",
+      "primeira_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -116,7 +132,7 @@
       "data_publicacao": "2026-11-09",
       "id": "ff17574e8e97",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     },
@@ -148,7 +164,7 @@
       "data_publicacao": "2026-11-17",
       "id": "d87729df4963",
       "primeira_vez_visto": "2026-11-22",
-      "ultima_vez_visto": "2026-11-26",
+      "ultima_vez_visto": "2026-11-27",
       "mudou_fase": false,
       "novo": true
     }
