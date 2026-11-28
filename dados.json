@@ -1,11 +1,11 @@
 {
-  "ultima_atualizacao": "27/11/2026 às 16:33 (Horário de Brasília)",
+  "ultima_atualizacao": "28/11/2026 às 01:02 (Horário de Brasília)",
   "total": 9,
   "fontes": [
     {
       "nome": "Portais de Notícias (Rumores, Autorizações e Editais)",
       "ok": true,
-      "encontrados": 3
+      "encontrados": 2
     },
     {
       "nome": "PCI Concursos (Editais Abertos SP)",
@@ -36,7 +36,7 @@
       "data_publicacao": "2026-09-29",
       "id": "72f9650ce41c",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -52,7 +52,7 @@
       "data_publicacao": "2026-09-10",
       "id": "f4080bc6d6f2",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -68,7 +68,7 @@
       "data_publicacao": "2024-10-02",
       "id": "5f3d02b55f89",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -81,10 +81,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Estadual (SP)",
       "escolaridade": "Não informado",
-      "data_publicacao": "2026-11-27",
+      "data_publicacao": "2026-11-28",
       "id": "1cb194e7aaa6",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -97,10 +97,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Federal (SP)",
       "escolaridade": "Superior",
-      "data_publicacao": "2026-11-27",
+      "data_publicacao": "2026-11-28",
       "id": "0d0f5933a5ef",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -113,10 +113,10 @@
       "estagio": "Edital Aberto",
       "esfera": "Estadual (SP)",
       "escolaridade": "Superior",
-      "data_publicacao": "2026-11-27",
+      "data_publicacao": "2026-11-28",
       "id": "a093ab68b469",
       "primeira_vez_visto": "2026-11-27",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -132,7 +132,7 @@
       "data_publicacao": "2026-11-09",
       "id": "ff17574e8e97",
       "primeira_vez_visto": "2026-11-21",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
@@ -148,7 +148,7 @@
       "data_publicacao": "2026-11-23",
       "id": "ce567c95cfdc",
       "primeira_vez_visto": "2026-11-23",
-      "ultima_vez_visto": "2026-11-27",
+      "ultima_vez_visto": "2026-11-28",
       "mudou_fase": false,
       "novo": true
     },
